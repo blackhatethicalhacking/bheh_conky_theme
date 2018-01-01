@@ -1,0 +1,111 @@
+# Conky-Theme by Black Hat Ethical Hacking
+# Written by //SaintDruG for blackhatethicalhacking.com 
+
+background no
+xftfont Terminus:size=8
+xftalpha 0.8
+update_interval 3.0
+total_run_times 0
+own_window yes
+#own_window_type normal
+#own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+minimum_size 200 220
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders yes
+default_color white
+default_shade_color black
+alignment top_right
+gap_x 12
+gap_y 35
+no_buffers yes
+cpu_avg_samples 2
+override_utf8_locale no
+uppercase yes
+
+TEXT
+$stippled_hr
+${color #00FF00} $nodename - $sysname $kernel ($machine) $color
+$stippled_hr
+#Kernel: $alignr $kernel
+Uptime: $alignr $uptime
+
+#$stippled_hr
+${color #00FF00}blackhatethicalhacking.com $color
+#$stippled_hr
+
+Processing Power:
+$stippled_hr
+
+CPU1: ${alignr} ${cpu cpu1}%
+CPU2: ${alignr} ${cpu cpu2}%
+
+${color #00FF00} ${cpugraph 20} $color
+
+Load: $alignr $loadavg
+Processes: $alignr $processes
+Running: $alignr $running_processes
+
+Memory %
+$stippled_hr
+
+RAM: $alignr $mem/$memmax
+
+${color #00FF00} ${membar 3} $color
+#Swap: $alignr $swap / $swapmax
+#${swapbar 3}
+#$stippled_hr
+#TOP
+#$stippled_hr
+
+#Name $alignr PID     CPU%   MEM%
+#${color #00FF00} ${top name 1} $alignr ${top pid 1} ${top cpu 1} ${top mem 1}$color
+# ${top name 2} $alignr ${top pid 2} ${top cpu 2} ${top mem 2}
+# ${top name 3} $alignr ${top pid 3} ${top cpu 3} ${top mem 3}
+Mem usage$color
+${color #00FF00} ${top_mem name 1} $alignr ${top_mem pid 1} ${top_mem cpu 1} ${top_mem mem 1}$color
+ ${top_mem name 2} $alignr ${top_mem pid 2} ${top_mem cpu 2} ${top_mem mem 2}
+ ${top_mem name 3} $alignr ${top_mem pid 3} ${top_mem cpu 3} ${top_mem mem 3}
+
+Temperature
+$stippled_hr
+
+${color #00FF00} CPU: ${alignr}${acpitemp}C$color
+ #GPU: $alignr ${execi 30 nvidia-settings -q [gpu:0]/GPUCoreTemp | grep '):' | awk '{print $4}' | #sed 's/\.//'}C
+
+#$stippled_hr
+HDD
+$stippled_hr
+
+#I/O:
+# Write: $alignr $diskio_write
+#${diskiograph_write 20}
+# Read: $alignr $diskio_read
+#${diskiograph_read 20}
+ROOT: $alignr ${fs_free /} / ${fs_size /}
+
+${color #00FF00} ${fs_bar 3 /} $color
+#HOME: $alignr ${fs_free /home} / ${fs_size /home}
+#${fs_bar 3 /home}
+#HDD1: $alignr ${fs_free /media/HDD1} / ${fs_size /media/HDD1}
+#${fs_bar 3 /media/HDD1}
+
+Network
+$stippled_hr
+
+Down:
+${color #00FF00} Speed: $alignr ${downspeed wlan0} k/s$color
+ Tot: $alignr ${totaldown wlan0}
+
+${color #00FF00} ${downspeedgraph wlan0 20} ${alignr}${upspeedgraph wlan0 20} $color
+
+Up:
+${color #00FF00} Speed: $alignr ${upspeed wlan0} k/s$color
+ Tot: $alignr ${totalup wlan0}
+
+${color #00FF00} ${upspeedgraph wlan0 20} ${alignr}${upspeedgraph wlan0 20} $color 
+${color #00FF00} $alignr security is a myth... //SaintDruG $color
+${voffset 300}
