@@ -1,5 +1,4 @@
 
-![alt text](https://scontent.fnic3-1.fna.fbcdn.net/v/t1.0-9/19399654_301498383593857_6654125625657238679_n.jpg?oh=37993f8b71f5aa6303cddad595802727&oe=5AE63B26)
 
 # bheh_conky_theme
 Black Hat Ethical Hacking - Official Theme for Conky Manager 
@@ -14,4 +13,5 @@ BTC Address to keep this github alive : 1EA8KirzbsqGSmTTRC2fQRTwgf2Un6JL6x
 
 ![Preview](https://github.com/blackhatethicalhacking/bheh_conky_theme/blob/master/Bheh_theme.png)
 
-![alt text](https://s-media-cache-ak0.pinimg.com/originals/1c/60/81/1c60812102b323ef2c3044aa5b8dcae8.png)
+
+![Logo_Green_text](https://user-images.githubusercontent.com/13942386/233072976-6beb6c6e-3308-4cd1-8f38-73e4be79b906.png)
